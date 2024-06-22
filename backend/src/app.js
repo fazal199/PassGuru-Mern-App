@@ -5,7 +5,7 @@ import cors from "cors";
 const app = express();
 
 const corsOptions = {
-    origin: "http://localhost:5173", // 
+    origin: "*", // 
     methods: "GET,PATCH,DELETE,POST",
     credentials: true,
 }
