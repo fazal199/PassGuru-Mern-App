@@ -70,14 +70,14 @@ const SignUp = () => {
           Now You Don't Need To Remember Your Passwords!
         </p>
       </div>
-      <form className="mt-10 space-y-6 max-w-sm mx-auto" action="#" method="POST">
+      <form className="mt-10 space-y-6 max-w-sm mx-auto">
         <div className="relative">
           <label className="text-sm font-bold text-gray-700 tracking-wide">Username</label>
-          <input onChange={({ target }) => handleUserCredentials(target.name, target.value)} value={userCredentials.userName} type="text" name="userName" required className="w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="foobar432" />
+          <input required onChange={({ target }) => handleUserCredentials(target.name, target.value)} value={userCredentials.userName} type="text" name="userName"  className="w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="foobar432" />
         </div>
         <div className="relative">
           <label className="text-sm font-bold text-gray-700 tracking-wide">Email</label>
-          <input onChange={({ target }) => handleUserCredentials(target.name, target.value)} value={userCredentials.userEmail} type="email" name="userEmail" required className="w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="mail@gmail.com" />
+          <input  onChange={({ target }) => handleUserCredentials(target.name, target.value)} value={userCredentials.userEmail} type="email" name="userEmail" required className="w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="mail@gmail.com" />
         </div>
         <div className="mt-8 content-center">
           <label className="text-sm font-bold text-gray-700 tracking-wide">Password</label>

@@ -61,14 +61,14 @@ const SignIn = () => {
           Please sign in to your account
         </p>
       </div>
-      <form className="mt-10 space-y-6 max-w-sm mx-auto" action="#" method="POST">
+      <form className="mt-10 space-y-6 max-w-sm mx-auto">
         <div className="relative">
           <label className="text-sm font-bold text-gray-700 tracking-wide">Email</label>
           <input onChange={({ target }) => handleUserCredentials(target.name, target.value)} value={userCredentials.userEmail} type="email" name="userEmail" required className="w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="mail@gmail.com" />
         </div>
         <div className="mt-8 content-center">
           <label className="text-sm font-bold text-gray-700 tracking-wide">Password</label>
-          <input onChange={({ target }) => handleUserCredentials(target.name, target.value)} value={userCredentials.userPassword} type="password" name="userPassword" className="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="Enter your password" />
+          <input required onChange={({ target }) => handleUserCredentials(target.name, target.value)} value={userCredentials.userPassword} type="password" name="userPassword" className="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" placeholder="Enter your password" />
         </div>
         <div>
           <button onClick={(e) => handleSubmit(e)} type="submit" className="w-full flex justify-center bg-black text-white p-4  rounded-full tracking-wide font-semibold  focus:outline-none focus:shadow-outline text-lg shadow-lg cursor-pointer transition ease-in duration-300">Login</button>
