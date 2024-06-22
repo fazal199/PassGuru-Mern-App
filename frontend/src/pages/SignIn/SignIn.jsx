@@ -74,9 +74,9 @@ const SignIn = () => {
           <button onClick={(e) => handleSubmit(e)} type="submit" className="w-full flex justify-center bg-black text-white p-4  rounded-full tracking-wide font-semibold  focus:outline-none focus:shadow-outline text-lg shadow-lg cursor-pointer transition ease-in duration-300">Login</button>
         </div>
         <div>
-          <button onClick={(e) => handleSubmit(e, true)} className="w-full flex justify-center bg-black text-white p-4  rounded-full tracking-wide font-semibold  focus:outline-none focus:shadow-outline  shadow-lg cursor-pointer transition ease-in duration-300">SignIn With Google
+         {/*  <button onClick={(e) => handleSubmit(e, true)} className="w-full flex justify-center bg-black text-white p-4  rounded-full tracking-wide font-semibold  focus:outline-none focus:shadow-outline  shadow-lg cursor-pointer transition ease-in duration-300">SignIn With Google
             <FcGoogle className="relative text-3xl left-2 -top-[1px]" />
-          </button>
+          </button> */}
         </div>
         <p className="flex flex-row gap-3 items-center justify-center mt-10 text-center text-md text-gray-500">
           <span>Don't have an account?</span>
