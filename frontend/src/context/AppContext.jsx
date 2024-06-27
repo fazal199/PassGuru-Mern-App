@@ -98,9 +98,9 @@ const AppContext = ({ children }) => {
             }
          })
 
-         fetchUserData();
+         await fetchUserData();
          toast.success("Record successfully deleted!",{autoClose : 2000});
-         window.location.reload();
+        
 
 
       } catch (error) {
