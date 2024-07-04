@@ -7,14 +7,17 @@ const signUpUser = asyncHandler(async (req, res) => {
 
    const { userName, userEmail, userPassword } = req.body;
 
+
    //check if user doesn't send the required info.
    if (!userName || !userEmail || !userPassword)
       throw new ApiError(400, "plzz provide full information!");
+
 
    // check if user exists already
    const isUserAlreadyExist = await User.findOne({ email: userEmail });
    if (isUserAlreadyExist)
       throw new ApiError(409, "User Already exist!");
+
 
 
    //create a new user and save
@@ -24,6 +27,8 @@ const signUpUser = asyncHandler(async (req, res) => {
       password: userPassword,
       userEntries: [],
    });
+
+   console.log(newUser);
 
    //removing some sensitive fields like password etc
    newUser = await User.findOne({ _id: newUser._id }, { password: 0, refreshToken: 0 })
