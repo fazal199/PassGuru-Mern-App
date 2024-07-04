@@ -8,7 +8,7 @@ const DataTable = () => {
     const { userData, deleteRecord, setIsUpdate, updateCurrentFormData } = usePassword();
 
     const handleUpdate = (record) => {
-        window.scrollTo({top : 0})
+        window.scrollTo({ top: 0 })
         setIsUpdate(true);
         updateCurrentFormData(record);
     }
