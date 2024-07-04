@@ -40,11 +40,11 @@ const AppContext = ({ children }) => {
          })
 
          setuserData(userUpdatedData.data.userEntries);
-         toast.success("New Entry Added!",{autoClose : 2000});
+         toast.success("New Entry Added!", { autoClose: 2000 });
 
       } catch (error) {
          console.log("something went wrong while creating new entry through api call!");
-         toast.error("Record already existed!",{autoClose : 2000});
+         toast.error("Record already existed!", { autoClose: 2000 });
          console.log(error)
       }
 
@@ -73,14 +73,14 @@ const AppContext = ({ children }) => {
             }
          })
 
-         toast.success("Record successfully Updated!",{autoClose : 2000});
+         toast.success("Record successfully Updated!", { autoClose: 2000 });
          setIsUpdate(false);
          fetchUserData();
 
       } catch (error) {
          console.log("something went wrong while updating the entry through api call!");
          setIsUpdate(false);
-         toast.error("Record couldn't be updated!",{autoClose : 2000});
+         toast.error("Record couldn't be updated!", { autoClose: 2000 });
 
          console.log(error)
       }
@@ -99,13 +99,13 @@ const AppContext = ({ children }) => {
          })
 
          fetchUserData();
-         toast.success("Record successfully deleted!",{autoClose : 2000});
-        
+         toast.success("Record successfully deleted!", { autoClose: 2000 });
+
 
       } catch (error) {
          console.log("something went wrong while deleting the entry through api call!");
          console.log(error)
-         toast.error("Record couldn't be deleted!",{autoClose : 2000});
+         toast.error("Record couldn't be deleted!", { autoClose: 2000 });
 
       }
    }
@@ -119,7 +119,7 @@ const AppContext = ({ children }) => {
             "Authorization": `Bearer ${accessToken}`
          }
       }
-      const { data: userPersonalDataFromBackend } = await axios.get("http://localhost:3000/api/v1/auth/user", options);
+      const { data: userPersonalDataFromBackend } = await axios.get(`${import.meta.env.VITE_SERVER_URL}/auth/user`, options);
       setUserPersonalData(userPersonalDataFromBackend.data)
       setIsUserLoggedIn(true);
       setuserData(userPersonalDataFromBackend.data.userEntries);
